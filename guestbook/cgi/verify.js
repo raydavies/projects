@@ -10,14 +10,14 @@ function verifyForm()
 	var cmmtmsg = document.getElementById("commenterrormsg");
 	var cmmtvalid = false;
 
-	if (emptyField(comment,cmmtmsg)) {
+	if (emptyField(comment, cmmtmsg)) {
 		return true;
 	} else {
 		return false;
 	}
 }
 
-function emptyField(field,msg)
+function emptyField(field, msg)
 {
 	if (field.value!='') {
 		msg.style.display="none";

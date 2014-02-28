@@ -1,6 +1,13 @@
 body {
 	color: #000;
 	font: 100% 'Arial', 'Helvetica', sans-serif;
+	font-size: 16px;
+	background: url('assets/bg.jpg') left top repeat;
+}
+#guestbook {
+	width: 500px;
+	margin: 0 auto;
+	padding: 10px 0;
 }
 hr {
 	display: none;
@@ -24,7 +31,7 @@ h1 {
 }
 .username {
 	font-weight: bold;
-	font-size: 14pt;
+	font-size: 1.25em;
 	border-bottom: 2px solid #000;
 }
 .usercomment {
@@ -35,7 +42,7 @@ h1 {
 	text-align: right;
 }
 .comment a {
-	font-size: 10pt;
+	font-size: 0.875em;
 	color: black;
 	text-align: right;
 	text-decoration: none;
@@ -52,18 +59,9 @@ h1 {
 	font-style: italic;
 	display: none;
 }
-
-#loginerr {
-	position: absolute;
-	right: 45px;
-	bottom: 15px;
-	color: red;
-	font-weight: bold;
-	font-style: italic;
-}
 #newcomment {
 	background-color: #fdebcf;
-	width: 400px;
+	width: 480px;
 	padding: 0 0 10px 10px;
 	border: 5px dotted #a4d4b0;
 	margin: 10px 0 0 0;
@@ -72,20 +70,46 @@ h1 {
 h2 {
 	line-height: 10px;
 }
+.label {
+}
 input[type='text'], input[type='password'] {
-	font-size: 14pt;
+	width: 75%;
+	padding: 5px;
+	font-size: 1.1em;
 	font-family: "Courier New", monotype;
+	border-radius: 5px;
 }
 input[type='submit'] {
-	font-size: 16pt;
+	padding: 5px 10px;
+	font-size: 1.25em;
+	border: 1px solid #999;
+	border-radius: 5px;
+	cursor: pointer;
 }
-#newcomment p {
-	margin: 0px;
-	line-height: 23px;
+input[type='submit']:hover, input[type='submit']:focus {
+	box-shadow: 0 0 2px 1px rgba(0,0,0,0.5);
+}
+.element {
+	margin: 0 0 10px 0;
+}
+.element p {
+	margin: 0;
+}
+#loginerr {
+	color: red;
+	font-weight: bold;
 }
 textarea {
-	font-size: 14pt;
 	position: relative;
 	z-index: 5;
-	width: 370px;
+	width: 80%;
+	padding: 5px;
+	font-size: 1.1em;
+	border-radius: 5px;
+}
+.logout {
+	margin-left: 5px;
+	position: relative;
+	bottom: 1px;
+	font-size: 0.825em;
 }

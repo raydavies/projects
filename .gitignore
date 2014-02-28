@@ -14,3 +14,4 @@ error_log
 *~
 *.swp
 guestbook/config
+guestbook/assets
