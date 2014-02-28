@@ -1,0 +1,92 @@
+body {
+	color:black;
+	font:100% 'Arial','Helvetica',sans-serif;
+}
+hr {
+	display:none;
+}
+h1 {
+	margin:-5px 0 0;
+}
+#forum {
+	width:500px;
+	border-bottom:black 5px double;	
+}
+.comment {
+	padding:10px;
+	margin:10px 0;
+	border:3px solid black;
+	background-color:#8dcff4;
+	text-align:left;
+}
+.timestamp {
+	float:right;
+}
+.username {
+	font-weight:bold;
+	font-size:14pt;
+	border-bottom:2px solid black;
+}
+.usercomment {
+	clear:both;
+	line-height:20px;
+}
+.delete {
+	text-align:right;
+}
+.comment a {
+	font-size:10pt;
+	color:black;
+	text-align:right;
+	text-decoration:none;
+}
+.comment a:hover {
+	font-weight:bold;
+}
+
+/*****New comment box*******/
+
+.errormsg {
+	color:red;
+	font-weight:bold;
+	font-style:italic;
+	display:none;
+}
+
+#loginerr {
+	position: absolute;
+	right: 45px;
+	bottom: 15px;
+	color: red;
+	font-weight: bold;
+	font-style: italic;
+}
+
+#newcomment {
+	background-color:#fdebcf;
+	width:400px;
+	padding:0 0 10px 10px;
+	border:5px dotted #a4d4b0;
+	margin:10px 0 0 0;
+	position:relative;
+}
+h2 {
+	line-height:10px;
+}
+input[type='text'],input[type='password'] {
+	font-size:14pt;
+	font-family:"Courier New", monotype;
+}
+input[type='submit'] {
+	font-size:16pt;
+}
+#newcomment p {
+	margin:0px;
+	line-height:23px;
+}
+textarea {
+	font-size:14pt;
+	position:relative;
+	z-index:5;
+	width:370px;
+}
