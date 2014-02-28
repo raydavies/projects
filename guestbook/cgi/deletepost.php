@@ -1,4 +1,4 @@
-i<?php
+<?php
 session_start();
 if (!empty($_SESSION['notbot'])) {
 	include_once("../inc/postclass.php");
