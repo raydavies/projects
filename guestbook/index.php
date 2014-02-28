@@ -5,7 +5,7 @@ $_SESSION['errormsg'] = '';
 require_once('config/info.php');
 require_once('DbAdapter.php');
 
-$db = new DbAdapter($db_params['development']);
+$db = new DbAdapter($db_params['production']);
 
 if (isset($_POST['user'], $_POST['pass'])) {
 	$username = cleanData($_POST['user']);

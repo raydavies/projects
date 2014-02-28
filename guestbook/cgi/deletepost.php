@@ -1,11 +1,11 @@
-<?php
+i<?php
 session_start();
 if (!empty($_SESSION['notbot'])) {
 	include_once("../inc/postclass.php");
 	
 	require_once('../config/info.php');
 	require_once('../DbAdapter.php');
-	$db = new DbAdapter($db_params['development']);
+	$db = new DbAdapter($db_params['production']);
 	
 	$post = $_GET['postid'];
 	$sql = "DELETE FROM posts WHERE postid = ".$post;

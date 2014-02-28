@@ -12,7 +12,7 @@ if (!empty($_SESSION['notbot'])) {
 		require_once('../config/info.php');
 		require_once('../DbAdapter.php');
 
-		$db = new DbAdapter($db_params['development']);
+		$db = new DbAdapter($db_params['production']);
 
 		date_default_timezone_set('America/Chicago');
 		$post = new Post();
