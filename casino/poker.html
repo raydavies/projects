@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Poker</title>
+	
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<link rel="icon" href="images/die.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="images/die.ico" type="image/x-icon" />
+
+<link rel="stylesheet" type="text/css" href="main.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script src="cardclass.js" type="text/javascript"></script>
+<script src="handrank.js" type="text/javascript"></script>
+<script src="poker.js" type="text/javascript"></script>
+</head>
+
+<body>
+<div id="container">
+
+<div id="intro">
+<h1>Welcome to this simple Poker program!</h1>
+<p>Click the PLAY button to begin!</p>
+</div>
+<div id="rules">
+	<h2>Rules of Play</h2>
+	<ul>
+		<li>5 Card Video Poker</li>
+		<li>9/6 Jacks or Better</li>
+		<li>Minimum bet is $1</li>
+		<li>Maximum bet is $5</li>
+		<li>Deck is shuffled each play</li>
+		<li>No cheating</li>
+	</ul>
+</div>
+
+<input type="button" value="PLAY" id="playbutton">
+
+<div id="pocket"></div>
+
+<div id="betbox" class="hidden">
+    <form>
+	<span>Place your bets:</span><br>
+	<input type="radio" name="bet" class="bet" value=1 checked="checked">$1
+	<input type="radio" name="bet" class="bet" value=2>$2
+	<input type="radio" name="bet" class="bet" value=3>$3<br>
+	<input type="radio" name="bet" class="bet" value=4>$4
+	<input type="radio" name="bet" class="bet" value=5>$5
+	<br>
+	<input type="button" id="betbutton" value="Bet!">
+    </form>
+</div>
+
+<div id="playarea" class="hidden">
+	<div id="pokerbox">
+		<span>Deal new cards</span><br>
+		<input type="button" id="drawbutton" value="Deal!">
+	</div>
+</div>
+
+<div id="gametable">
+	<div id="player"></div>
+	<div id="holdbox" class="hidden">
+	<input type="button" id="button0" class="hold" value="Hold">
+	<input type="button" id="button1" class="hold" value="Hold">
+	<input type="button" id="button2" class="hold" value="Hold">
+	<input type="button" id="button3" class="hold" value="Hold">
+	<input type="button" id="button4" class="hold" value="Hold">
+	</div>
+	<div id="gameover" class="hidden"></div>
+</div>
+<div id="paytable" class="hidden">
+	<table>
+		<tr>
+			<td>Royal Flush</td>
+			<td>250</td>
+			<td>500</td>
+			<td>750</td>
+			<td>1000</td>
+			<td>4000</td>
+		</tr>
+		<tr>
+			<td>Straight Flush</td>
+			<td>50</td>
+			<td>100</td>
+			<td>150</td>
+			<td>200</td>
+			<td>250</td>
+		</tr>
+		<tr>
+			<td>Four of a Kind</td>
+			<td>25</td>
+			<td>50</td>
+			<td>75</td>
+			<td>100</td>
+			<td>125</td>
+		</tr>
+		<tr>
+			<td>Full House</td>
+			<td>9</td>
+			<td>18</td>
+			<td>27</td>
+			<td>36</td>
+			<td>45</td>
+		</tr>
+		<tr>
+			<td>Flush</td>
+			<td>6</td>
+			<td>12</td>
+			<td>18</td>
+			<td>24</td>
+			<td>30</td>
+		</tr>
+		<tr>
+			<td>Straight</td>
+			<td>4</td>
+			<td>8</td>
+			<td>12</td>
+			<td>16</td>
+			<td>20</td>
+		</tr>
+		<tr>
+			<td>Three of a Kind</td>
+			<td>3</td>
+			<td>6</td>
+			<td>9</td>
+			<td>12</td>
+			<td>15</td>
+		</tr>
+		<tr>
+			<td>Two Pair</td>
+			<td>2</td>
+			<td>4</td>
+			<td>6</td>
+			<td>8</td>
+			<td>10</td>
+		</tr>
+		<tr>
+			<td>Jacks or Better</td>
+			<td>1</td>
+			<td>2</td>
+			<td>3</td>
+			<td>4</td>
+			<td>5</td>
+		</tr>
+	</table>
+</div>
+
+<div id="result"></div>
+
+<div id="continuebox" class="hidden"><span>Play Again?</span><br><input type="button" value="Yes!" id="continue"></div>
+
+<a href="../casino" class="homelink">Back to the Casino Floor<br><img src="images/table.png" alt="Home"></a>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Blackjack</title>
+	
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<link rel="icon" href="images/die.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="images/die.ico" type="image/x-icon" />
+
+<link rel="stylesheet" type="text/css" href="main.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script src="cardclass.js" type="text/javascript"></script>
+<script src="blackjack.js" type="text/javascript"></script>
+</head>
+
+<body>
+<div id="container">
+
+<div id="intro">
+<h1>Welcome to this simple Blackjack program!</h1>
+<p>Click the PLAY button to begin!</p>
+</div>
+
+<div id="rules">
+	<h2>Rules of Play</h2>
+	<ul>
+		<li>Dealer hits on soft 17</li>
+		<li>Blackjack pays 3:2</li>
+		<li>Insurance pays 2:1</li>
+		<li>Insurance offered on dealer Ace</li>
+		<li>Double after split allowed</li>
+		<li>Late surrender only</li>
+		<li>Minimum bet is $1</li>
+		<li>Maximum bet is $100</li>
+		<li>No cheating</li>
+	</ul>
+</div>
+
+<input type="button" value="PLAY" id="playbutton">
+
+<div id="pocket"></div>
+
+<!--
+<div id="deckbox" class="hidden">
+    <form>
+	<span>How many decks would you like to play with?</span><br>
+	<input type="radio" name="deck" class="deck" value=1 checked="checked">1
+	<input type="radio" name="deck" class="deck" value=2>2
+	<input type="radio" name="deck" class="deck" value=3>3
+	<input type="radio" name="deck" class="deck" value=5>5
+	<input type="radio" name="deck" class="deck" value=8>8
+	<input type="button" id="deckbutton" value="Deal!">
+    </form>
+</div>
+-->
+
+<div id="betbox" class="hidden">
+    <form>
+	<span>Place your bets:</span><br>
+	<input type="radio" name="bet" class="bet" value=1 checked="checked">$1
+	<input type="radio" name="bet" class="bet" value=5>$5
+	<input type="radio" name="bet" class="bet" value=10>$10<br>
+	<input type="radio" name="bet" class="bet" value=25>$25
+	<input type="radio" name="bet" class="bet" value=50>$50
+	<input type="radio" name="bet" class="bet" value=100>$100
+	<br>
+	<input type="button" id="betbutton" value="Bet!">
+    </form>
+</div>
+
+<div id="insurancebox" class="hidden">
+	<span>Insure Against Dealer?</span><br>
+	<input type="button" id="insurebutton" value="Insurance">
+	<input type="button" id="evenbutton" value="Even Money">
+	<input type="button" id="nobutton" value="No Thanks">
+</div>
+
+<div id="hitarea" class="hidden">
+	<div id="playerbox">
+		<span>Player Options</span><br>
+		<input type="button" id="hitbutton" value="Hit Me!">
+		<input type="button" id="staybutton" value="Stand"><br>
+		<input type="button" id="ddbutton" value="Double Down">
+		<input type="button" id="splitbutton" value="Split"><br>
+		<input type="button" id="surrenderbutton" value="Surrender">
+	</div>
+</div>
+
+<div id="gametable">
+<div id="dealer"></div>
+<div id="player"></div>
+<div id="gameover" class="hidden"></div>
+</div>
+
+<img src="images/pointer.png" alt="<-----------" id="pointer" class="hidden">
+
+<div id="result"><span></span></div>
+
+<div id="continuebox" class="hidden"><span>Play Again?</span><br><input type="button" value="Yes!" id="continue"></div>
+
+<a href="../casino" class="homelink">Back to the Casino Floor<br><img src="images/table.png" alt="Home"></a>
+</div><!--End Container-->
+
+</body>
+</html>
